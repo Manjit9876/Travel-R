@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <title>Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppin', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(rgba(7, 7, 7, 0.4), rgba(7, 7, 7, 0.2)), url(images/namchi.jpg);
+
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            padding: 0 8%;
+        }
+
+        .container h1 {
+            position: relative;
+            text-transform: uppercase;
+            text-align: center;
+            padding-top: 10%;
+            margin-bottom: 60px;
+            color: rgb(229, 231, 240);
+        }
+
+        .container h1::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: rgb(125, 142, 216);
+        }
+
+        .container .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .container .row .service {
+            background: rgb(111, 143, 190, 0.3);
+            padding: 25px 10px;
+            text-align: center;
+            border-radius: 10px;
+            border: 0;
+            outline: none;
+            border: 2px solid rgb(99, 99, 197);
+            transition: transform .5s;
+        }
+
+        .container .row .service:hover {
+            transform: scale(1.07);
+            background: rgb(52, 91, 163);
+            color: aliceblue;
+            border: none;
+        }
+
+        .container .row .service:hover p {
+            color: rgb(159, 178, 197);
+        }
+
+        .container .row .service i {
+            font-size: 40px;
+            color: rgb(90, 142, 191);
+            margin-bottom: 10px;
+        }
+
+        .container .row .service:hover i {
+            font-size: 40px;
+            color: rgb(233, 242, 242);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="row">
+            <div class="service">
+                <i class="fa-solid fa-suitcase"></i>
+                <h2>Tour Packages</h2>
+                <p>Explore our flexible tour packages with personalized itineraries that cater to your interests and
+                    ensure a memorable travel experience.</p>
+            </div>
+            <div class="service">
+                <i class="fa-brands fa-guilded"></i>
+                <h2>Local Guide</h2>
+                <p>Gain insider knowledge and enrich your journey with our experienced local guides who provide
+                    authentic insights and recommendations.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-car-rear"></i>
+                <h2> Vehicle Rentals</h2>
+                <p> Choose from a diverse fleet of well-maintained vehicles to suit your travel needs and enjoy the
+                    freedom to explore at your own pace.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-question"></i>
+                <h2>Customer Support</h2>
+                <p> Our 24/7 customer support team is here to assist with any queries or concerns, ensuring a smooth and
+                    enjoyable travel experience.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h2>Travel Planning</h2>
+                <p>Let our experienced team craft a seamless travel itinerary tailored to your preferences, ensuring
+                    every detail of your trip is expertly managed.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-tags"></i>
+                <h2>Deals and Discounts</h2>
+                <p>Save on your travels with our special offers and discounts, designed to give you more value and
+                    unforgettable experiences.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-globe"></i>
+                <h2>Activities and Experience</h2>
+                <p>Immerse yourself in curated activities that bring the local culture to life, creating unforgettable memories
+                    and enriching your journey.</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-money-check-dollar"></i>
+                <h2>Currency Exchange </h2>
+                <p>Access convenient and competitive currency exchange services to ensure you have the local currency
+                    you need for a smooth travel experience.</p>
+            </div>
+
+        </div>
+    </div>
+    <button type="submit">Home</button>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Your Ultimate', 'Travel Guide.'],
+            typeSpeed: 50,
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <title>Book</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppin', sans-serif;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(7, 7, 7, 0.4), rgba(7, 7, 7, 0.2)), url(images/nagaland.jpg);
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            color: aliceblue;
+
+        }
+
+        .left .logo {
+            float: left;
+        }
+
+        .logo {
+            padding-left: 6px;
+            font-size: 3.5rem;
+            padding-top: 10px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            background-image: url(images/tea2.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            filter: drop-shadow(3px 3px 3px rgb(80, 154, 238))
+        }
+
+        .logo a i {
+            color: rgb(125, 16, 16);
+        }
+
+        .main {
+            background-color: rgba(52, 103, 161, 0.2);
+            padding: 20px;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgb(204, 212, 208);
+        }
+
+        form {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 0;
+            outline: none;
+            background: rgba(242, 244, 245, 0.5);
+            border-radius: 5px;
+            border: 2px solid rgb(63, 97, 134);
+        }
+
+        form input:hover {
+            color: black;
+            background: rgba(213, 221, 225, 0.7);
+        }
+
+        form h3 {
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: xx-large;
+            margin-bottom: 20px;
+
+        }
+
+        form button {
+            padding: 15px;
+            background: rgba(38, 30, 151, 0.8);
+            border: 0;
+            outline: none;
+            margin-top: 50px;
+            font-size: 14px;
+            font-weight: 800;
+            color: white;
+            width: 50%;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            letter-spacing: 2px;
+            margin-left: 25%;
+            border-radius: 10px;
+        }
+
+        form button:hover {
+            cursor: pointer;
+            background-color: #2394c4;
+            box-shadow: 0px 10px 10px rgba(46, 177, 229, 0.4);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        form .state {
+            display: flex;
+            margin-bottom: 10px;
+            gap: 7px;
+            width: 100%;
+        }
+
+        form .state select {
+            display: flex;
+            padding: 10px;
+            background: rgba(242, 244, 245, 0.5);
+            border: 0;
+            outline: none;
+            border: 2px solid rgb(63, 97, 134);
+            border-radius: 5px;
+            width: 100%;
+        }
+        form .state select:hover{
+            color: black;
+            background: rgba(207, 218, 223, 0.7);
+            cursor: pointer;
+        }
+
+        form .rent {
+            display: flex;
+            margin-bottom: 10px;
+            gap: 7px;
+            width: 100%;
+        }
+
+        form .rent select {
+            display: flex;
+            padding: 10px;
+            border: 0;
+            outline: none;
+            border: 2px solid rgb(63, 97, 134);
+            background: rgba(242, 244, 245, 0.5);
+            border-radius: 5px;
+            width: 49%;
+        }
+        form .rent select:hover{
+            color: black;
+            background: rgba(213, 221, 225, 0.7);
+            cursor:pointer;
+        }
+
+        .date {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        form .date label {
+            font-size: 16px;
+            font-weight: 750;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="left">
+        <h2 class="logo"><a href="index.html" target="_self">T<i class="fa-solid fa-car-side"></i>R
+            </a></h2>
+    </div> -->
+    <div class="main">
+
+        <form action="bo">
+            <h3>Book</h3>
+            <input type="text" placeholder="Enter your name">
+            <div>
+                <input type="email" placeholder="Enter your email">
+                <input type="phone" placeholder="Enter your phone no.">
+            </div>
+            <div class="state">
+                <select name="slt1" id="slt1" onchange="populate(this.id,'slt2')">
+                    <option value="State">Select State</option>
+                    <option value="arunchal">Arunachal
+                    </option>
+                    <option value="assam">Assam</option>
+                    <option value="manipur">Manipur</option>
+                    <option value="meghalaya">Meghalaya</option>
+                    <option value="mizoram">Mizoram</option>
+                    <option value="nagaland">Nagaland</option>
+                    <option value="sikkim">Sikkim</option>
+                    <option value="tripura">Tripura</option>
+                </select>
+                <select name="slt2" id="slt2"></select>
+            </div>
+            <div class="rent">
+                <select name="st1" id="st1" onchange="populate(this.id,'st2')">
+                    <option value="rent a vehicle">Rent a vehicle</option>
+                    <option value="car 4 seater">Car 4 seater</option>
+                    <option value="two wheeler">Two wheeler</option>
+                    <option value="bus">Bus</option>
+                    <option value="car 6 seater">Car 6 seater</option>
+                    <option value="no">No</option>
+                </select>
+                <select name="" id="">
+                    <option value="rent a guide">Rent a Local Guide</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+            </div>
+            <div class="date">
+                <label for="">From :</label>
+                <input type="date" placeholder="from">
+                <label for="">To :</label>
+                <input type="date" placeholder="to">
+            </div>
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Your Ultimate', 'Travel Guide.'],
+            typeSpeed: 50,
+        });
+
+        function populate(s1, s2) {
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+
+            s2.innerHTML = "";
+            if (s1.value == "arunchal") {
+                var optarray = ['anini| Anini', 'bhaluk pung |Bhaluk Pung', 'bomdila| Bomdila', 'dirang H.Q| Dirang H.Q','sela pass| Sela Pass','sungester lake|Sungester Lake','ziro|Ziro','itanagar|Itanagar','tezu|Tezu','mechuka|Mechuka','golden pagoda| Golden Pagoda'];
+            }
+            else if (s1.value == "assam") {
+                var optarray = ['guwahati| Guwahati', 'hajo|Hajo', 'maa kamakhya temple| Maa Kamakhya Temple', 'kaziranga national park| Kaziranga National Park','majuli|Majuli','tezpur| Tezpur','haflong|Haflong','sivasagar|Sivasagar','kakocheng waterfall| Kakocheng Waterfall','parshuram kund|Parshuram Kund'];
+            }
+            else if (s1.value == "meghalaya") {
+                var optarray = ['dawki| Dawki', 'elephant falls|Elephant Falls', 'krang suri falls| Krang suri Falls', 'shillong| Shillong','cherrapunji|Cherrapunji','umiam lake| Umiam Lake','nohakalikai|Nohakalikai','mawsynram| Mawsynram','mawsmai cave| Mawsmai Cave','mawlynnong| Mawlynnong','laitlum canyon| Laitlum Canyon'];
+            }
+            else if (s1.value == "manipur") {
+                var optarray = ['bijoy govindaji temple|Bijoy Govindaji Temple', 'chandel|Chandel', 'churachandpur| Churachandpur', 'imphal| Imphal','loktak lake|Loktak Lake','senpati| Senapati','thoubal|Thoubal','kangala fort| Kangala Fort','ukhrul|Ukhrul','tamenlong|Tamenglong','keibul national park| Keibul National Park'];
+            }
+            else if (s1.value == "nagaland") {
+                var optarray = ['dzukou valley|Duzukou Valley', 'dzuleke|Dzuleke', 'kohima| Kohima', 'khonoma| Khonoma','kisama heritage village| Kisama Heritage Village','longwa|Longwa','wokha|Wokha','shilloi|Shilloi','japfu peak | Japfu Peak','mokokchung|Mokokchung','kohima war cemetery|Kohima War Cemetery'];
+            }
+            else if (s1.value == "mizoram") {
+                var optarray = ['aizawl|Aizawl', 'champhai|Champhai', 'dampa tiger reserve|Dampa Tiger Reserve', 'falkawn village|Falkawn Village','vantawng falls|Vantawng Falls','reiek|Reiek','hmuifang|Hmuifang','lunglei|Lunglei','murnal national park| Murnal National Park','mamit|Mamit','phawngpui peak| Phawngpui Peak'];
+            }
+            else if (s1.value == "tripura") {
+                var optarray = ['devtamura|Devtamura', 'gunavati temples|Gunavati Temples', 'jagannath temple|Jagannath Temple', 'jampui hills|Jampui Hills','neermahal|Neermahal','unakoti rock carvings|Unakoti Rock Carvings','tripura sundari temple|Tripura Sundari Temple','ujjayanta palace|Ujjayanta Palace','mahamuni buddha mandir|Mahamuni Buddha Mandir','pilak|Pilak','tripura museums|Tripura Museums'];
+            }
+            else if (s1.value == "sikkim") {
+                var optarray = ['darjeeling|Darjeeling', 'gangtok|Gangtok', 'khangchendzonga national park|Khangchendzonga National Park', 'pelling| Pelling','ravangla | Ravangla','tsongmo lake|Tsongmo Lake','yumthang valley|Yumthang Valley','namchi|Namchi','lachung town| Lachung Town','yuksom|Yuksom','rumtak monastery|Rumtak Monastery'];
+            }
+
+            for (var option in optarray) {
+                var pair = optarray[option].split("|");
+                var newoption = document.createElement("option");
+
+                newoption.value = pair[0];
+                newoption.innerHTML = pair[1];
+                s2.options.add(newoption);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

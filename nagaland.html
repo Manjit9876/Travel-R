@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Nagaland</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+</head>
+<style>
+  /* Navigation */
+  /* CSS Reset */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* CSS Variables */
+  :root {
+    --navbar-height: 59px;
+  }
+
+  /* Navigation Bar */
+  #navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    height: 70px;
+  }
+
+  #navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  /* Navigation Bar: Logo and Image */
+  #logo {
+    margin: 10px 20px;
+  }
+
+  /* #logo img {
+    height: 59px;
+    margin: 3px 6px;
+  } */
+  #logo a {
+    text-decoration: none;
+    height: 50px;
+    font-size: 2.7rem;
+    background-image: url(images/tea2.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: drop-shadow(3px 3px 3px rgb(80, 154, 238));
+    font-family: 'Bree Serif', serif;
+  }
+
+  #logo a i {
+
+    color: rgb(125, 16, 16);
+  }
+
+  /* Navigation Bar: List Styling */
+
+  #navbar ul {
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+  }
+
+  #navbar ul li {
+    list-style: none;
+    font-size: 1.1rem;
+  }
+
+  #navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+
+  #navbar ul li a:hover {
+    color: black;
+    background-color: white;
+  }
+
+  .search {
+    display: inline-block;
+    /* margin-left: 10px; */
+  }
+
+  .search button {
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    height: 45px;
+    width: 150px;
+  }
+
+  .search a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding: 7px 10px;
+  }
+
+  .search .menu {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    min-width: 147px;
+    box-shadow: 2px 5px 10px rgb(239, 235, 235);
+    border-radius: 5px;
+    color: black;
+    margin-left: 1.2px;
+    text-align: center;
+  }
+
+  .search:active .menu {
+    display: block;
+  }
+
+  .search:hover button {
+    background: transparent;
+    color: rgb(225, 225, 225);
+    cursor: pointer;
+    border: 2px solid white;
+  }
+
+  .search a:hover {
+    display: block;
+    background-color: rgb(90, 78, 197);
+    color: rgb(224, 224, 234);
+  }
+
+  .rent {
+    padding: 1.3em 2.5em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .rent:hover {
+    background-color: #2394c4;
+    box-shadow: 0px 15px 20px rgba(46, 177, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .login .button {
+    padding: 1.3em 2.5em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .login .button:hover {
+    /* background-color: rgb(98, 38, 154);
+      transition: 0.1s; */
+    background-color: #2394c4;
+    box-shadow: 0px 15px 20px rgba(46, 177, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  #navbar .login {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 10px;
+  }
+
+
+  /* Home Section */
+  #home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 560px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #home::before {
+    content: "";
+    position: absolute;
+    background: url('images/back.jpg') no-repeat center center/cover;
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+  }
+
+  #home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    letter-spacing: 2px;
+    background-image: url(images/L1.webp);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  #home p {
+    color: rgb(82, 90, 199);
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+    box-shadow: 0px 4px 10px rgb(35, 42, 192);
+    padding: 10px;
+    border-radius: 10px;
+    background-image: url(images/tripura.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .btn {
+    margin-top: 20px;
+    padding: 1.3em 2.5em;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .btn:hover {
+    background-color: #2394c4;
+    box-shadow: 0px 15px 20px rgba(46, 177, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .firstSection {
+    font-family: 'Bree Serif', serif;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0%;
+  }
+
+  .firstSection>div {
+    width: 35%;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgb(53, 74, 180);
+    padding: 0px 4px;
+  }
+
+  .leftSection img {
+    width: 95%;
+    margin: 30px 0%;
+    padding: 0 10px;
+  }
+
+  .rightSection img {
+    width: 95%;
+    margin: 30px 0%;
+    padding: 0 10px;
+  }
+
+  .leftSection div {
+    width: 0% 100px;
+  }
+
+  .blue {
+    font-size: 2rem;
+    color: rgb(86, 63, 189);
+  }
+
+  .SecondSection {
+    font-family: 'Bree Serif', serif;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0%;
+
+  }
+
+  .SecondSection>div {
+    width: 35%;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgb(53, 74, 180);
+    padding: 5px 4px;
+  }
+
+  .LSection img {
+    width: 95%;
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+
+  .RSection img {
+    width: 95%;
+    margin: 46px 0%;
+    padding: 0 10px;
+  }
+
+  .LSection div {
+    width: 0% 100px;
+  }
+
+  .ThirdSection {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Bree Serif', serif;
+    margin: 20px 0%;
+  }
+
+  .ThirdSection>div {
+    width: 35%;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgb(53, 74, 180);
+    padding: 10px 4px;
+  }
+
+  .L1Section img {
+    width: 93%;
+    padding: 7px 13px;
+  }
+
+  .right a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .R1 img {
+    width: 95%;
+    margin: 46px 0%;
+    padding: 0 10px;
+  }
+
+  .L1Section div {
+    width: 0% 100px;
+  }
+
+  /* Other Places to visit */
+  .body{
+    width: 100%;
+    text-align: center;
+  }
+  .body h1{
+    font-family: 'Bree Serif', serif;
+    padding: 0 30px;
+    font-size: 3rem;
+    color: rgb(71, 104, 202);
+  }
+  .body .tours {
+    font-family: 'Bree Serif', serif;
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 30px;
+  }
+
+  .tours .places img:hover {
+    transform: rotatey(360deg);
+    transition: 3s;
+  }
+  .tours .places img{
+    max-width: 100%;
+    box-shadow: 0px 15px 20px rgba(46, 55, 229, 0.4);
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Services Section */
+
+  #services-container {
+    width: 100%;
+    /* margin: 34px; */
+    height: auto;
+    /* gap: 20px; */
+  }
+
+  #services-container h1 {
+    text-align: center;
+    position: relative;
+    /* text-transform: uppercase; */
+    padding-top: 10px;
+    color: rgb(68, 110, 190);
+
+  }
+
+  #services-container #services {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    padding: 30px 80px;
+  }
+
+  #services-container #services .box {
+    background: rgb(111, 143, 190, 0.3);
+    padding: 25px 10px;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    border: 2px solid rgb(99, 99, 197);
+    transition: transform .5s;
+  }
+
+  #services-container #services .box:hover {
+    transform: scale(1.07);
+    background: rgb(52, 91, 163);
+    color: aliceblue;
+    border: none;
+  }
+
+  #services .box p {
+    font-family: 'Bree Serif', serif;
+
+  }
+
+  #services .box:hover p {
+    color: rgb(159, 178, 197);
+  }
+
+  #services .box i {
+    font-size: 40px;
+    color: rgb(90, 142, 191);
+    margin-bottom: 10px;
+  }
+
+  #services .box:hover i {
+    color: rgb(233, 242, 242);
+  }
+
+  /* Utility Classes */
+  .h-primary {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+  }
+
+  /* .h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+  } */
+  footer {
+    height: auto;
+    background-color: #6f74bd;
+  }
+
+  .footercontainer {
+    width: 100%;
+  }
+
+  .social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social a {
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px rgb(33, 32, 32, );
+  }
+
+  .social a svg {
+    height: 20px;
+  }
+
+  .social a ::before {
+    content: attr(data-social);
+    position: absolute;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(33, 32, 32, 0.06);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms ease-in-out;
+  }
+
+  .social a:hover {
+    background-color: var(--accent-color);
+    fill: white;
+  }
+
+  .footernav ul {
+    display: flex;
+    color: rgb(231, 230, 236);
+    justify-content: end;
+    list-style: none;
+  }
+
+  .footernav ul li a {
+    text-decoration: none;
+    margin: 0 20px;
+    color: rgb(231, 230, 236);
+    font-size: 1.1rem;
+    opacity: 0.7;
+    transition: 0.1s;
+  }
+
+  .footernav ul li a:hover {
+    opacity: 1;
+    color: rgb(170, 160, 234);
+  }
+
+  .footerbottom {
+    width: 100%;
+    text-align: end;
+    background-image: linear-gradient(rgba(7, 7, 7, 0.5), rgba(7, 7, 7, 0.2)), url(images/foot.jpg);
+  }
+
+  .footerbottom p {
+    color: rgb(210, 210, 219);
+    padding: 20px;
+  }
+
+  .designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(126, 98, 192);
+    margin: 0 10px;
+  }
+
+  .follow {
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+    color: rgb(239, 244, 247);
+  }
+
+  .follow i {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .customer {
+    padding: 0px 30px;
+    font-family: 'Bree Serif', serif;
+  }
+
+  .customer ul li {
+    padding: 2px;
+    list-style: none;
+  }
+
+  .customer ul li a {
+    text-decoration: none;
+    color: rgb(231, 230, 236);
+  }
+
+  .customer ul li a:hover {
+    cursor: pointer;
+    color: rgb(170, 160, 234);
+  }
+</style>
+
+<body>
+  <nav id="navbar">
+    <div id="logo">
+      <a href="index.html" target="_self">T<i class="fa-solid fa-car-side"></i>R
+      </a>
+    </div>
+    <ul>
+      <li class="item"><a href="index.html">Home</a></li>
+      <li class="item"><a href="about.html">About</a></li>
+      <li class="item"><a href="gallery.html">Gallery</a></li>
+      <li class="item"><a href="service.html">Services</a></li>
+      <li class="item"><a href="mailto:travelr@gmail.com">Contact</a></li>
+    </ul>
+    <div class="search">
+      <button onclick="toggleMenu()">Select State <i class="fa-solid fa-caret-down"></i></button>
+      <div id="dropdownMenu" class="menu">
+        <a href="Assam.html" target="_blank">Assam</a>
+        <a href="Arunachal.html" target="_blank">Arunachal</a>
+        <a href="Meghalaya.html" target="_blank">Meghalaya</a>
+        <a href="nagaland.html" target="_blank">Nagaland</a>
+        <a href="Manipur.html" target="_blank">Manipur</a>
+        <a href="Tripura.html" target="_blank">Tripura</a>
+        <a href="Sikkim.html" target="_blank">Sikkim</a>
+        <a href="Mizoram.html" target="_blank">Mizoram</a>
+      </div>
+    </div>
+    <div class="login">
+      <a href="book.html" title="Book or rent"><button class="rent">book</button></a>
+      <a href="Login Interface/login.html" title="Login to continue"><button class="button">
+          Login</button></a>
+    </div>
+  </nav>
+  <section id="home">
+    <h1 class="h-primary">Nagaland</h1>
+    <p>One of the most striking features of Northeast India is its diverse and pristine landscapes. From
+      the majestic Himalayan ranges in the north to the lush green valleys of Assam and the cascading
+      waterfalls of Meghalaya, each state in the region boasts its unique.
+      <br>
+      From the snow-clad peaks of the Himalayas to lush green valleys, cascading waterfalls, and
+      tranquil
+      lakes, the region is a paradise for nature lovers. Explore the pristine beauty of places like
+      Tawang in Arunachal Pradesh, Kaziranga National Park in Assam, and the living root bridges of
+      Meghalaya.
+    </p>
+    <button class="btn">Book Now</button>
+  </section>
+  <section class="firstSection">
+    <div class="leftSection"><span class="blue">DZUKOU VALLEY </span>
+        <div>Dzukou Valley is a picturesque valley located on the border of the Indian states of Nagaland and
+            Manipur, in the northeastern region of India. It's renowned for its breathtaking natural beauty,
+            comprising lush greenery, rolling hills, and vibrant flora. The valley is nestled at an altitude of
+            around 2,452 meters above sea level, making it a haven for trekkers, nature enthusiasts, and
+            photographers.</div>
+        <br>
+        <div>The name "Dzukou" is derived from the Angami Naga dialect, where "Dzu" means "cold" and "Kou" means
+            "water," reflecting the valley's chilly climate and abundant water sources. One of the highlights of
+            Dzukou Valley is the Dzukou Lily, a rare and beautiful flower that blooms during the monsoon season,
+            adding to the valley's charm.
+            Trekking is a popular activity in Dzukou Valley, with various trails offering different levels of
+            difficulty. The most common trekking route starts from the base camp at Viswema village in Nagaland,
+            leading to the valley through dense forests and rocky terrain. The journey typically takes around
+            3-4 hours, offering panoramic views of the surrounding landscape along the way.</div>
+        <br>
+        <div>Once in the valley, visitors are treated to stunning vistas of rolling hills carpeted with a
+            variety
+            of flora, including rhododendrons, wildflowers, and bamboo groves. There are also several streams
+            and waterfalls dotting the landscape, adding to its ethereal beauty.
+            Dzukou Valley is not only a paradise for nature lovers but also holds cultural significance for the
+            indigenous Naga tribes, who consider it a sacred place. It's a serene retreat away from the hustle
+            and bustle of city life, offering a tranquil environment for relaxation and rejuvenation amidst
+            nature's splendor.</div>
+
+        <img src="images/dz1.jpg" alt="">
+    </div>
+    <div class="rightSection">
+        <img src="images/dzukou-valley-photos-1024x681.jpg" alt="">
+        <div>When preparing for a trek, it's essential to have the right equipment to ensure your safety,
+            comfort, and enjoyment. Here's a list of basic equipment you might need for trekking: </div>
+        <div>
+            1. **Backpack** </div>
+        <div>
+
+            2. **Trekking Boots or Shoes** </div>
+        <div>
+
+            3. **Clothing**</div>
+        <div>
+
+            4. **Navigation Tools**</div>
+        <div>
+            5. **Water and Hydration System**</div>
+        <div>
+
+            6. **Nutrition**</div>
+        <div>
+
+            7. **First Aid Kit**</div>
+        <div>
+
+            8. **Emergency Shelter**</div>
+        <div>
+
+            9. **Multi-tool or Knife**</div>
+        <div>
+
+            10. **Headlamp or Flashlight**</div>
+        <div>
+
+            11. **Sun Protection**</div>
+        <div>
+            12. **Personal Identification and Emergency Contact Information**</div>
+        <br>
+        <div>Before embarking on any trek, it's crucial to assess the specific requirements of your chosen route
+            and adjust your packing list accordingly. Additionally, ensure you have the necessary skills and
+            knowledge to use your equipment effectively and respond to emergencies.
+        </div>
+    </div>
+
+</section>
+<section class="SecondSection">
+    <div class="LSection"><span class="blue">KISAMA HERITAGE VILLAGE</span>
+        <div>Kisama Heritage Village is a cultural village located near Kohima, the capital city of Nagaland, in
+            northeastern India. It serves as the venue for the Hornbill Festival, one of the most significant
+            cultural festivals in Nagaland and the entire northeastern region of India.
+
+            The Hornbill Festival, celebrated annually in the first week of December, showcases the rich
+            cultural heritage of the Naga tribes. Kisama Heritage Village was specifically built to host this
+            festival and to provide a platform for Naga tribes to exhibit their traditions, customs, arts,
+            crafts, music, dance, and cuisine.
+
+            Key features of Kisama Heritage Village and the Hornbill Festival include:</div>
+        <br>
+        <div>1.Traditional Naga Architecture: The village is designed to resemble a traditional Naga village,
+            with various tribal huts representing different Naga tribes. Each hut showcases unique architectural
+            styles, building materials, and cultural artifacts specific to the respective tribes.</div>
+        <br>
+        <div>2.Cultural Performances: During the Hornbill Festival, visitors are treated to a colorful array of
+            cultural performances, including traditional Naga dances, folk songs, indigenous games, and rituals.
+            These performances offer insights into the diverse cultural practices of the Naga people.</div>
+        <br>
+        <div>3.Arts and Crafts: The festival provides a platform for Naga artisans to display and sell their
+            handicrafts, which often include intricately woven textiles, bamboo and cane products, wood
+            carvings, pottery, jewelry, and traditional attire. Visitors have the opportunity to interact with
+            artisans and purchase authentic Naga handicrafts.
+
+        </div>
+        <img src="images/ks1.jpg" alt="">
+    </div>
+    <div class="RSection">
+        <img src="images/ks2.jpg" alt="">
+        <div>4.Food and Cuisine: The festival features a variety of Naga cuisines, offering visitors the chance
+            to savor traditional Naga delicacies and local dishes prepared using indigenous ingredients and
+            cooking methods. Food stalls and vendors showcase the culinary diversity of the Naga tribes.</div>
+        <br>
+        <div>5.Cultural Workshops and Exhibitions: Visitors can participate in cultural workshops and
+            exhibitions that highlight various aspects of Naga culture, including traditional crafts, music,
+            dance, folklore, and agricultural practices. These interactive sessions provide a deeper
+            understanding of Naga heritage.</div>
+        <br>
+        <div>6.Tribal Morungs: Morungs are traditional communal houses used by Naga tribes for social
+            gatherings, discussions, and ceremonies. At Kisama Heritage Village, visitors can explore
+            reconstructed morungs and learn about their significance in Naga society.</div>
+        <br>
+        <div>Overall, Kisama Heritage Village and the Hornbill Festival offer a vibrant platform for celebrating
+            and preserving the cultural identity of the Naga tribes, fostering intercultural exchange, and
+            promoting tourism in Nagaland. It's a must-visit destination for those interested in experiencing
+            the rich cultural tapestry of northeastern India.</div>
+
+    </div>
+</section>
+<section class="ThirdSection">
+    <div class="L1Section"><span class="blue">KHONOMA</span>
+        <div>Khonoma is a historic village located in the Kohima district of Nagaland, India, approximately 20
+            kilometers away from the state capital, Kohima. It holds significant cultural and historical
+            importance as one of the most prominent and well-preserved villages in Nagaland. Here's more about
+            Khonoma:</div>
+        <br>
+        <div>1.History: Khonoma is renowned for its rich history of valor and resistance against British
+            colonial rule. It was one of the last Naga villages to surrender to the British in the late 19th
+            century. The village is known for its fiercely independent spirit and its role in the Naga freedom
+            struggle.</div>
+        <div>2.Conservation: Khonoma is also notable for its conservation efforts and sustainable practices. It
+            gained international recognition for its community-led initiatives in biodiversity conservation and
+            ecological preservation. The Khonoma Nature Conservation and Tragopan Sanctuary (KNCTS) is a
+            testament to the village's commitment to environmental conservation.</div>
+        <div>3.Cultural Heritage: The village is home to the Angami Naga tribe, and it boasts a rich cultural
+            heritage. Visitors to Khonoma can experience traditional Naga architecture, including intricately
+            carved wooden houses and raised platforms used for community gatherings. The village is also known
+            for its vibrant festivals, traditional dances, and indigenous crafts.</div>
+
+        <img src="images/khonoma.png" alt="">
+
+    </div>
+    <div class="R1">
+        <img src="images/khonoma2.png" alt="">
+        <div>4.Tourism: In recent years, Khonoma has emerged as a popular tourist destination in Nagaland,
+            attracting travelers interested in exploring its cultural heritage, natural beauty, and conservation
+            initiatives. Tourists can engage in activities such as trekking, birdwatching, and village tours to
+            learn about Khonoma's history, culture, and biodiversity.</div>
+        <div>5.Dzüko Valley: Khonoma serves as a gateway to the famous Dzüko Valley, a picturesque valley known
+            for its stunning landscapes, seasonal flowers, and trekking trails. Many visitors to Khonoma also
+            include a visit to Dzüko Valley in their itinerary.
+
+        </div>
+        <div>6.Homestays: The village offers opportunities for immersive cultural experiences through homestays
+            with local families. Staying in Khonoma provides visitors with a chance to learn about Naga
+            traditions, cuisine, and way of life firsthand, while also supporting the local community.</div>
+        <br>
+        <div>Overall, Khonoma is not only a symbol of Naga resilience and cultural pride but also a model for
+            sustainable development and conservation efforts. Its unique blend of history, culture, and natural
+            beauty makes it a compelling destination for travelers seeking authentic experiences in Nagaland.
+        </div>
+    </div>
+</section>
+<div class="body">
+  <div class="heading">
+      <h1>Other Places </h1>
+  </div>
+  <div class="tours">
+      <div class="places">
+          <h2>Longwa</h2>
+          <a href="Assam.html" target="_blank"><img src="images/longwa.png"
+                  style="width: 280px; height: 160px;"></a>
+      </div>
+      <div class="places">
+          <h2>Wokha</h2>
+
+          <a href="Arunachal.html" target="_blank"><img src="images/wokha.png"
+                  style="width: 280px; height: 160px;"></a>
+      </div>
+      <div class="places">
+          <h2>Shilloi</h2>
+
+          <a href="Meghalaya.html" target="_blank"> <img src="images/shilloi.png"
+                  style="width: 280px; height: 160px;"></a>
+      </div>
+      <div class="places">
+          <h2>Japfu peak</h2>
+          <a href="nagaland.html" target="_blank"><img src="images/japfu peak.png"
+                  style="width: 280px; height: 160px;"></a>
+      </div>
+      <div class="places">
+          <h2>Mokokchung</h2>
+          <a href="Sikkim.html" target="_blank"><img src="images/mokokchung.png"
+                  style="width: 280px; height: 160px;"></a>
+      </div>
+      <div class="places">
+          <h2>Dzuleke</h2>
+          <a href="Assam.html" target="_blank"><img src="images/dzuleke.png"
+                  style="width: 280px; height: 160px;"></a>
+
+      </div>
+      <div class="places">
+          <h2>Kohima</h2>
+          <a href="Assam.html" target="_blank"><img src="images/Kohima_city.jpg"
+                  style="width: 280px; height: 160px;"></a>
+      </div>
+      <div class="places">
+          <h2>Kohima War Cemetery</h2>
+          <a href="nagaland.html" target="_blank"><img src="images/kohima_war.png"
+                  style="width: 280px; height: 160px;"></a>
+      </div>
+  </div>
+</div>
+  <section id="services-container">
+    <h1 class="h-primary center">Our Services</h1>
+    <div id="services">
+      <div class="box">
+        <i class="fa-solid fa-suitcase"></i>
+        <h2>Tour Packages</h2>
+        <p>Explore our flexible tour packages with personalized itineraries that cater to your interests and
+          ensure a memorable travel experience.</p>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-car-rear"></i>
+        <h2> Vehicle Rentals</h2>
+        <p> Choose from a diverse fleet of well-maintained vehicles to suit your travel needs and enjoy the
+          freedom to explore at your own pace.</p>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-question"></i>
+        <h2>Customer Support</h2>
+        <p> Our 24/7 customer support team is here to assist with any queries or concerns, ensuring a smooth and
+          enjoyable travel experience.</p>
+      </div>
+      <div class="box">
+        <i class="fa-brands fa-guilded"></i>
+        <h2>Local Guide</h2>
+        <p>Gain insider knowledge and enrich your journey with our experienced local guides who provide
+          authentic insights and recommendations.</p>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-calendar-check"></i>
+        <h2>Travel Planning</h2>
+        <p>Let our experienced team craft a seamless travel itinerary tailored to your preferences, ensuring
+          every detail of your trip is expertly managed.</p>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-tags"></i>
+        <h2>Deals and Discounts</h2>
+        <p>Save on your travels with our special offers and discounts, designed to give you more value and
+          unforgettable experiences.</p>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-globe"></i>
+        <h2>Activities and Experience</h2>
+        <p>Immerse yourself in curated activities that bring the local culture to life, creating unforgettable memories
+          and enriching your journey.</p>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <h2>Currency Exchange </h2>
+        <p>Access convenient and competitive currency exchange services to ensure you have the local currency
+          you need for a smooth travel experience.</p>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("dropdownMenu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+
+        // If menu is open, add event listener to close it when clicking outside
+        if (menu.style.display === "block") {
+          document.addEventListener("click", closeMenuOnClickOutside);
+        }
+      }
+
+      // Function to close the menu when clicking outside of it
+      function closeMenuOnClickOutside(event) {
+        var menu = document.getElementById("dropdownMenu");
+        var button = document.querySelector('.search button');
+
+        if (!menu.contains(event.target) && !button.contains(event.target)) {
+          menu.style.display = "none";
+          document.removeEventListener("click", closeMenuOnClickOutside);  // Remove the event listener once the menu is closed
+        }
+      }
+    </script>
+
+    <footer class="footer">
+      <div class="footercontainer">
+        <div class="follow">
+          Follow us on <i class="fa-solid fa-hand-point-down"></i>
+        </div>
+        <div class="social">
+          <a data-social="Facebook" style="--accent-color:rgb(35, 89, 177);"
+            href="https://www.facebook.com/manjit.boro.9279" target="_blank"><svg role="img" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <title>Facebook</title>
+              <path
+                d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+            </svg>
+          </a>
+          <a data-social="Instagram" style="--accent-color:rgb(255, 0, 212);"
+            href="https://www.instagram.com/mjt_boro38/" target="_blank"><svg role="img" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <title>Instagram</title>
+              <path
+                d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+            </svg></a>
+          <a data-social="Twitter" style="--accent-color:rgb(12, 12, 12);" href="https://x.com/ManjitB55314268"
+            target="_blank"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>X</title>
+              <path
+                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+            </svg></a>
+          <a data-social="Linkedin" style="--accent-color:rgb(10, 73, 168);"
+            href="https://www.linkedin.com/in/manjit-boro-0b24a0258/" target="_blank"><svg role="img"
+              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>LinkedIn</title>
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg></a>
+        </div>
+        <div class="customer">
+          <ul>
+            <li><a href="service.html">services</a></li>
+            <li><a href="service.html">Review</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="mboro6144@gmail.com">Help</a></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <div class="footernav">
+          <ul>
+            <li><i class="fa-solid fa-phone"></i> +91 9387716358</li>
+            <li><a href="mboro6144@gmail.com"><i class="fa-solid fa-envelope"></i> mboro6144@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerbottom">
+        <p> Copyright &copy;2024 ; Designed by <span class="designer">Manjit</span></p>
+      </div>
+
+    </footer>
+</body>
+
+</html>
