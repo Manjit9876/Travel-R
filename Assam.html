@@ -36,7 +36,7 @@
     align-items: center;
     position: sticky;
     top: 0px;
-    height: 70px;
+    height: auto;
   }
 
   #navbar::before {
@@ -223,7 +223,7 @@
   #home::before {
     content: "";
     position: absolute;
-    background: url('images/lo.jpg') no-repeat center center/cover;
+    background: url('images/ka2.jpg') no-repeat center center/cover;
     height: 642px;
     top: 0px;
     left: 0px;
@@ -237,7 +237,7 @@
     text-align: center;
     font-family: 'Bree Serif', serif;
     letter-spacing: 2px;
-    background-image: url(images/U1.jpg);
+    background-image: url(images/darjeeling2.png);
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -252,7 +252,7 @@
     box-shadow: 0px 4px 10px rgb(35, 42, 192);
     padding: 10px;
     border-radius: 10px;
-    background-image: url(images/tripura.jpg);
+    background-image: url(images/loktak.jpg);
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -298,16 +298,20 @@
     padding: 0px 4px;
   }
 
-  .leftSection img {
+  .firstSection .leftSection img {
     width: 95%;
     margin: 30px 0%;
-    padding: 0 10px;
+    /* padding: 0 10px; */
+    justify-content: center;
+    align-items: center;
   }
 
-  .rightSection img {
+  .firstSection .rightSection img {
     width: 95%;
     margin: 30px 0%;
-    padding: 0 10px;
+    /* padding: 0 10px; */
+    justify-items: center;
+    align-items: center;
   }
 
   .leftSection div {
@@ -338,13 +342,16 @@
   .LSection img {
     width: 95%;
     margin-top: 30px;
-    padding: 0 10px;
+    /* padding: 0 10px; */
+    justify-items: center;
+    align-items: center;
   }
 
   .RSection img {
     width: 95%;
     margin: 46px 0%;
     padding: 0 10px;
+
   }
 
   .LSection div {
@@ -368,7 +375,9 @@
 
   .L1Section img {
     width: 93%;
-    padding: 7px 13px;
+    /* padding: 7px 13px; */
+    justify-items: center;
+    align-items: center;
   }
 
   .right a {
@@ -379,7 +388,9 @@
   .R1 img {
     width: 95%;
     margin: 46px 0%;
-    padding: 0 10px;
+    /* padding: 0 10px; */
+    justify-items: center;
+    align-items: center;
   }
 
   .L1Section div {
@@ -438,7 +449,7 @@
   #services-container #services {
     display: grid;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
     padding: 30px 80px;
@@ -620,10 +631,133 @@
   }
 
 
-  @media (max-width:720px){
-    #home p{
-       color: red !important;
-       background-color: yellow;
+
+    /* responsive */
+    @media screen and (max-width: 871px) {
+    #navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #navbar ul li a {
+      font-size: 1rem;
+      padding: 0 7px;
+    }
+    #navbar button{
+      width: 100%;
+      padding: 10px;
+    }
+    #navbar .login{
+      padding:5px;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    #navbar .login button{
+      padding: 15px;
+      justify-content: center;
+    }
+
+    #home {
+      height: 400px;
+      padding: 3px 10px;
+    }
+
+    #home::before {
+      height: 630px;
+    }
+
+    #home p {
+      font-size: 15px;
+    }
+    .body{
+      padding: 20px 0;
+    }
+
+    #navbar .btn {
+      font-size: 13px;
+      padding: 16px;
+    }
+
+    .h-primary {
+      font-size: 28px;
+    }
+    .blue{
+      font-size: 20px;
+    }
+    .firstSection img{
+      margin-right: 1px;
+    }
+    .firstSection img{
+      padding-right: 1px;
+    }
+  }
+
+ 
+    @media screen and (max-width: 1090px) {
+    #navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #navbar ul li a {
+      font-size: 1rem;
+      padding: 0 7px;
+    }
+    /* #navbar button{
+      width: 100%;
+      padding: 10px;
+    } */
+    #navbar .login{
+      padding:5px;
+      gap: 10px;
+      justify-content: center;
+    }
+    #home {
+      height: 400px;
+      padding: 3px 10px;
+    }
+
+    #home::before {
+      height: 630px;
+    }
+
+    #home p {
+      font-size: 17px;
+    }
+    .firstSection{
+      padding: 15px 0;
+    }
+    .body{
+      padding: 20px 0;
+    }
+  }
+
+
+  @media screen and (max-width: 428px) {
+    
+    /* #navbar button{
+      width: 100%;
+      padding: 10px;
+    } */
+    #home {
+      height: 400px;
+      padding: 3px 10px;
+    }
+
+    #home::before {
+      height: 620px;
+    }
+
+    #home p {
+      font-size: 17px;
+    }
+    .firstSection{
+      padding: 20px 0;
+      margin-top: 30px;
+    }
+    .body{
+      padding: 20px 0;
     }
   }
 </style>
@@ -666,14 +800,9 @@
     <p>One of the most striking features of Northeast India is its diverse and pristine landscapes. From
       the majestic Himalayan ranges in the north to the lush green valleys of Assam and the cascading
       waterfalls of Meghalaya, each state in the region boasts its unique.
-      <br>
-      From the snow-clad peaks of the Himalayas to lush green valleys, cascading waterfalls, and
-      tranquil
-      lakes, the region is a paradise for nature lovers. Explore the pristine beauty of places like
-      Tawang in Arunachal Pradesh, Kaziranga National Park in Assam, and the living root bridges of
-      Meghalaya.
+      
     </p>
-    <button class="btn">Book Now</button>
+    <a href="book.html" title="Book or rent"><button class="btn">Book Now</button></a>
   </section>
   <section class="firstSection">
     <div class="leftSection"><span class="blue">ASSAM TEA GARDENS</span>
